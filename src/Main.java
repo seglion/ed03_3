@@ -50,6 +50,9 @@ public class Main {
     }
 
     // Aplica un descuento de acuerdo al subtotal
+    // Aplica un 15% para compras de más de 1000 euros
+    // Aplica un 10% para compras entre 500 y 1000 euros
+    // No aplica ningún descuento si la compra es de menos de 500 euros
     public static double aplicarDescuento(double subtotal) {
         if (subtotal > 1000) {
             return subtotal * 0.15; // Descuento del 15%
