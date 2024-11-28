@@ -35,13 +35,13 @@ public class Main {
 
         // Error lógico: no se aplica correctamente la función calcularImpuestos
         double totalConImpuestos = calcularImpuestos(totalConDescuento);
-        return totalConImpuestos;
+        return totalConImpuestos + totalConDescuento;
     }
 
     // Calcula el subtotal de la compra
-    public static double calcularSubtotal(List<String> productos, List<Double> precios, int[] cantidades) {
+    public static double calcularSubtotal(@org.jetbrains.annotations.NotNull List<String> productos, List<Double> precios, int[] cantidades) {
         double subtotal = 0;
-        for (int i = 0; i <= productos.size(); i++) {
+        for (int i = 0; i <productos.size(); i++) {
             // Error de control: verificar si la cantidad es mayor que cero
             subtotal += precios.get(i) * cantidades[i];
         }
